@@ -1,0 +1,21 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+
+.splash-gradient {
+    background: linear-gradient(0deg, #8C8AC6, #8C8AC6);
+}
+
+
+.details-gradient {
+    background: linear-gradient(300.23deg, #514EA1 19.24%, #9795D0 73.2%);
+}
+
+.login-button-gradient {
+    background: linear-gradient(0deg, #7F7DBC, #7F7DBC);
+}
