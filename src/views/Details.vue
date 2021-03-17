@@ -2,25 +2,50 @@
    <div class="details-gradient">
       <div class="mx-auto container">
          <div class="flex flex-col justify-center items-center h-screen">
-            <img class="w-1/2" src="@/assets/images/details-one.png" alt="details-one">
-            
-            <!-- <h1 class="text-lg text-white font-extrabold mb-2">Личный кабинет</h1> 
-            <p class="text-xs text-white font-medium text-left w-2/3 mb-5">Если вы уже зарегистрированы   то пройдите авторизацию. Если нет,  то ознакомьтесь с основной информацией о возможностях “личного кабинета” и выполните  простые шаги регистрации.</p>
-            <button class="py-3 px-20 login-button-gradient text-white w-2/3 mb-2 font-bold rounded-md focus:outline-none focus:shadow-md">Войти</button>
-            <router-link to="/details">
-            <span class="font-bold text-white">подробнее</span>
-            </router-link> -->
+            <slider :items="sliderItems"/>
          </div>
       </div>
    </div>
 </template>
 
 <script>
-export default {
 
+import Slider from '@/components/Slider.vue'
+
+export default {
+      data(){
+         return {
+            sliderItems: [
+               {
+                  id: 1,
+                  title: "Командная работа",
+                  paragraph: "Общайтесь и решайте в онлайне  задачи компании всей командой",
+                  imgSrc: require('@/assets/images/details-one.png'),
+               },
+               {
+                  id: 2,
+                  title: "Управление и контроль",
+                  paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
+                  imgSrc: require('@/assets/images/details-two.png'),
+               },
+               {
+                  id: 3,
+                  title: "Командная работа",
+                  paragraph: "Общайтесь и решайте в онлайне  задачи компании всей командой",
+                  imgSrc: require('@/assets/images/details-one.png'),
+               },
+               {
+                  id: 4,
+                  title: "Управление и контроль",
+                  paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
+                  imgSrc: require('@/assets/images/details-two.png'),
+               }
+            ]
+         }
+      },
+      components : {
+         Slider
+      }
 }
 </script>
 
-<style>
-
-</style>
