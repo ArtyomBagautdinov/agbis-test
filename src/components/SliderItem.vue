@@ -1,8 +1,6 @@
 <template>
   <div>
-      <div class="w-full mr-20">
-          <img :src="itemObject.imgSrc" alt="detailsImg">
-      </div>
+      <img style="min-width:200px; max-width:200px;" :src="itemObject.imgSrc" alt="detailsImg">
   </div>
 </template>
 

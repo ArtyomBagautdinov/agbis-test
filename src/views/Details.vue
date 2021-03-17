@@ -26,7 +26,7 @@ export default {
                   id: 2,
                   title: "Управление и контроль",
                   paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
-                  imgSrc: require('@/assets/images/details-two.png'),
+                  imgSrc: require('@/assets/images/details-one.png'),
                },
                {
                   id: 3,
@@ -38,7 +38,7 @@ export default {
                   id: 4,
                   title: "Управление и контроль",
                   paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
-                  imgSrc: require('@/assets/images/details-two.png'),
+                  imgSrc: require('@/assets/images/details-one.png'),
                }
             ]
          }

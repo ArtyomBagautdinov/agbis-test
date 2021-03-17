@@ -1,5 +1,8 @@
 <template>
-   <div class="splash-gradient">
+   <div v-if="!isLoaded" class="flex flex-col justify-center items-center h-screen  splash-gradient">
+    <img src="@/assets/images/a-logo.png" alt="logo">
+  </div>
+   <div v-else class="splash-gradient">
       <div class="mx-auto container">
          <div class="flex flex-col justify-center items-center  h-screen">
             <img class="mb-5 w-12 h-12" src="@/assets/images/a-logo.png" alt="logo">
@@ -16,6 +19,14 @@
 
 <script>
    export default {
+      data(){
+         return {
+            isLoaded: false
+         }
+      },
+      mounted(){
+         setTimeout(() => {this.isLoaded = true}, 1000);
+      }
 
    }
 </script>

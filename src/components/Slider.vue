@@ -1,12 +1,15 @@
 <template>
-  <div class="h-full">
-      <div class="overflow-hidden mx-auto my-0 mx-width-300 h-1/2">
-        <div class="flex justify-start items-center h-full">
+  <div>
+      <div class="wrapper">
+        <div class="carousel" :style="{'margin-left': '-'+ (100*currentIndex)+'%'}">
           <slider-item v-for="val in items" :key="val.id" :itemObject="val"/>
         </div>
       </div>
-      <!-- <button @click="nextSlide" class="text-white text-large">next</button> -->
-      <!-- <button @click="prevSlide" class="text-white text-large">prev</button> -->
+      
+      <div class="flex flex-row justify-center">
+        <button @click="prevSlide" class="text-white text-large">prev</button>
+        <button @click="nextSlide" class="text-white text-large">next</button>
+      </div>
   </div>
 </template>
 
@@ -31,15 +34,15 @@ export default {
   },
   methods : {
     prevSlide(){
-      // if(this.currentIndex>0) {
+      if(this.currentIndex>0) {
         this.currentIndex--;
-      // }
+      }
       console.log(this.currentIndex);
     },
     nextSlide(){
-      // if(this.items.length < this.currentIndex) {
+      if(this.items.length -1 > this.currentIndex) {
         this.currentIndex++;
-      // }
+      }
       console.log(this.currentIndex);
     }
   }
@@ -48,7 +51,15 @@ export default {
 
 <style>
 
-  .mx-width-300{
-    max-width: 300px;
+  .wrapper {
+    max-width: 200px;
+    overflow: hidden;
+    margin: 0 auto;
   }
+
+  .carousel {
+    display: flex;
+    transition: all ease .5s;
+  }
+
 </style>
