@@ -19,3 +19,14 @@
 .login-button-gradient {
     background: linear-gradient(0deg, #7F7DBC, #7F7DBC);
 }
+
+.registration-button-gradient{
+    background: linear-gradient(90deg, #C84B97 -13.36%, #C84B97 38.59%), #D49CE8;
+}
+
+.slider-item-img {
+    min-width:250px; 
+    max-width:250px; 
+    max-height:230px;
+
+}

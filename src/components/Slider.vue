@@ -1,21 +1,23 @@
 <template>
   <div>
-      <div class="wrapper">
-        <div class="carousel" :style="{'margin-left': '-'+ (100*currentIndex)+'%'}">
-          <slider-item v-for="val in items" :key="val.id" :itemObject="val"/>
+      <div class="my-0 mx-auto overflow-hidden max-w-slider">
+        <div @touchstart="handleEventStart" @touchend="handleEventEnd" class="flex transition-all duration-500" :style="{'margin-left': '-'+ (100*currentIndex)+'%'}">
+          <div v-for="val in items" :key="val.id" class="flex flex-col items-center justify-evently">
+              <img class="object-cover slider-item-img" :src="val.imgSrc" alt="detailsImg">
+              <div class="mt-5 flex flex-col items-center">
+                  <h2 class="text-lg text-white font-extrabold w-11/12 text-center">{{val.title}}</h2>
+                  <p class="text-xs text-white font-medium text-center w-11/12">{{val.paragraph}}</p>
+              </div>
+          </div>
         </div>
       </div>
-      
-      <div class="flex flex-row justify-center">
-        <button @click="prevSlide" class="text-white text-large">prev</button>
-        <button @click="nextSlide" class="text-white text-large">next</button>
+      <div class="flex flex-row justify-center items-center mt-5">
+        <div v-for="val in items" :key="val.id" class="w-2 h-2  mx-1 rounded-full" :class="{ 'bg-white': val.id === currentIndex, 'bg-indigo-200': val.id !== currentIndex }"></div>
       </div>
   </div>
 </template>
 
 <script>
-
-import SliderItem from "@/components/SliderItem.vue"
 
 export default {
   props : {
@@ -24,12 +26,11 @@ export default {
       required: true
     }
   },
-  components: {
-    SliderItem
-  },
   data(){
     return {
-      currentIndex: 0
+      currentIndex: 0,
+      xBegin: null,
+      xEnd: null
     }
   },
   methods : {
@@ -37,29 +38,20 @@ export default {
       if(this.currentIndex>0) {
         this.currentIndex--;
       }
-      console.log(this.currentIndex);
     },
     nextSlide(){
       if(this.items.length -1 > this.currentIndex) {
         this.currentIndex++;
       }
-      console.log(this.currentIndex);
+    },
+    handleEventStart(e){
+      this.xBegin = e.changedTouches[0].screenX;
+    },
+    handleEventEnd(e){
+      this.xEnd = e.changedTouches[0].screenX;
+      if(this.xBegin < this.xEnd) this.prevSlide()
+      if(this.xBegin > this.xEnd) this.nextSlide()
     }
   }
 }
 </script>
-
-<style>
-
-  .wrapper {
-    max-width: 200px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-
-  .carousel {
-    display: flex;
-    transition: all ease .5s;
-  }
-
-</style>

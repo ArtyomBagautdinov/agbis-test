@@ -3,6 +3,7 @@
       <div class="mx-auto container">
          <div class="flex flex-col justify-center items-center h-screen">
             <slider :items="sliderItems"/>
+            <button class="mt-5 py-3 px-11 registration-button-gradient text-white mb-2 font-bold rounded-md focus:outline-none shadow-custom">Регистрация</button>
          </div>
       </div>
    </div>
@@ -17,28 +18,28 @@ export default {
          return {
             sliderItems: [
                {
-                  id: 1,
+                  id: 0,
                   title: "Командная работа",
                   paragraph: "Общайтесь и решайте в онлайне  задачи компании всей командой",
                   imgSrc: require('@/assets/images/details-one.png'),
                },
                {
-                  id: 2,
+                  id: 1,
                   title: "Управление и контроль",
                   paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
+                  imgSrc: require('@/assets/images/details-two.png'),
+               },
+               {
+                  id: 2,
+                  title: "Командная работа",
+                  paragraph: "Общайтесь и решайте в онлайне  задачи компании всей командой",
                   imgSrc: require('@/assets/images/details-one.png'),
                },
                {
                   id: 3,
-                  title: "Командная работа",
-                  paragraph: "Общайтесь и решайте в онлайне  задачи компании всей командой",
-                  imgSrc: require('@/assets/images/details-one.png'),
-               },
-               {
-                  id: 4,
                   title: "Управление и контроль",
                   paragraph: "Контролируй и влияй на любые внутренние процессы компанни с мобильного устройства",
-                  imgSrc: require('@/assets/images/details-one.png'),
+                  imgSrc: require('@/assets/images/details-two.png'),
                }
             ]
          }

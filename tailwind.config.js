@@ -134,6 +134,7 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
+      custom : '0px 4px 5px 2px rgba(34, 60, 80, 0.2)'
     },
     container: {},
     cursor: {
@@ -460,6 +461,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       prose: '65ch',
+      slider: '250px',
       ...breakpoints(theme('screens')),
     }),
     minHeight: {
