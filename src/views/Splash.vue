@@ -8,7 +8,7 @@
   export default {
     name: 'Splash',
     mounted(){
-         setTimeout(() => {this.$router.push('login')}, 1000);
+         setTimeout(() => {this.$router.push('login')}, 2000);
       }
   }
 </script>
