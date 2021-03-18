@@ -461,7 +461,7 @@ module.exports = {
       min: 'min-content',
       max: 'max-content',
       prose: '65ch',
-      slider: '300px',
+      slider: '320px',
       ...breakpoints(theme('screens')),
     }),
     minHeight: {

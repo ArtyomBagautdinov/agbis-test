@@ -1,16 +1,18 @@
 <template>
-   <div class="details-gradient h-screen">
-      <div class="flex flex-row justify-end p-5">
+   <div>
+     <div class="flex w-full flex-row justify-end p-5 absolute">
          <router-link to="/login">
-            <img class="pointer w-3 h-3" src="@/assets/icons/icon-close.png" alt="icon">
+            <img class="pointer w-3 h-3" src="@/assets/icons/icon-close.svg" alt="icon">
          </router-link>
       </div>
-      <div class="mx-auto container">
-         <div class="flex flex-col justify-center items-center">
-            <slider :items="sliderItems"/>
-            <button class="mt-5 py-3 px-11 registration-button-gradient text-white mb-2 font-bold rounded-md focus:outline-none shadow-custom">Регистрация</button>
+      <div class="details-gradient h-screen flex flex-col justify-center">
+         <div class="mx-auto container">
+            <div class="flex flex-col justify-center items-center">
+               <slider :items="sliderItems"/>
+               <button class="mt-5 py-3 px-11 registration-button-gradient text-white mb-2 font-bold rounded-md focus:outline-none shadow-custom">Регистрация</button>
+            </div>
          </div>
-      </div>
+      </div>   
    </div>
 </template>
 
