@@ -25,7 +25,11 @@
 }
 
 .tab-bar-color {
-    color: #717DAB;
+    color: #717dab;
+}
+
+.swipe-bar-color {
+    color: #717dabbb;
 }
 
 .slider-item-img {
