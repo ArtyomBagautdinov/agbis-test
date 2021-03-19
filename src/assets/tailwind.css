@@ -24,6 +24,10 @@
     background: linear-gradient(90deg, #C84B97 -13.36%, #C84B97 38.59%), #D49CE8;
 }
 
+.tab-bar-color {
+    color: #717DAB;
+}
+
 .slider-item-img {
     padding-left: 40px;
     padding-right: 40px;

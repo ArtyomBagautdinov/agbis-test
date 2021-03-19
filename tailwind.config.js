@@ -134,7 +134,8 @@ module.exports = {
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
-      custom : '0px 4px 5px 2px rgba(34, 60, 80, 0.2)'
+      custom : '0px 4px 5px 2px rgba(34, 60, 80, 0.2)',
+      navbar: '0px -5px 8px -5px rgba(34, 60, 80, 0.2)'
     },
     container: {},
     cursor: {
