@@ -4,15 +4,15 @@
       <h2 class="font-bold text-gray-800 pt-2">{{postData.title}}</h2>
       <p class="text-sm font-medium text-gray-500 pt-3">{{postData.paragraph}}</p>
       <div class="flex flex-row justify-start pt-3">
-          <div class="flex flex-row justify-between items-center">
+          <div class="flex flex-row justify-between items-center cursor-pointer">
               <img class="w-5 h-5" src="@/assets/icons/post/watches.svg" alt="watches">
               <span class="font-medium text-sm text-gray-300 ml-1">{{postData.watches}}</span>
           </div>
-           <div class="flex flex-row justify-between items-center ml-2">
+           <div class="flex flex-row justify-between items-center ml-2 cursor-pointer">
               <img class="w-5 h-5" src="@/assets/icons/post/likes.svg" alt="watches">
               <span class="font-medium text-sm text-gray-300 ml-1">{{postData.likes}}</span>
           </div>
-           <div class="flex flex-row justify-between items-center mx-2">
+           <div class="flex flex-row justify-between items-center mx-2 cursor-pointer">
               <img class="w-5 h-5" src="@/assets/icons/post/comments.svg" alt="watches">
               <span class="font-medium text-sm text-gray-300 ml-1">{{postData.comments}}</span>
           </div>
