@@ -1,8 +1,8 @@
 <template>
   <div @click="goToPostPage(postData.id)" class="relative flex flex-col w-11/12 bg-white shadow-lg rounded-xl mt-1 mb-2 px-2 py-2 cursor-pointer">
       <div class="absolute w-24 top-5 left-5 bg-white shadow-md rounded-lg pl-3 pr-5 py-1 flex flex-col justify-center">
-          <span class="font-normal text-gray-400 text-xs">рубрика</span>
-           <span class="font-bold text-gray-500 text-md">{{postData.heading}}</span>
+        <span class="font-normal text-gray-400 text-xs">рубрика</span>
+        <span class="font-bold text-gray-500 text-md">{{postData.heading}}</span>
       </div>
       <img :src="postData.imgSrc" alt="postImage">
       <h2 class="font-bold text-gray-800 pt-2">{{postData.title}}</h2>

@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col w-full rounded-xl  px-2 py-2">
+    <div class="flex flex-col w-full px-2 py-2">
         <img :src="postData.imgSrc" alt="postImage">
         <h2 class="font-bold text-gray-800 pt-2">{{postData.title}}</h2>
         <p class="text-sm font-medium text-gray-500 pt-3">{{postData.fullParagraph}}</p>
