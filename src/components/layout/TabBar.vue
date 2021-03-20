@@ -51,9 +51,11 @@ export default {
     },
     methods: {
         handleEventStart(e){
+            e.preventDefault();
             this.yBegin = e.changedTouches[0].screenY;
         },
         handleEventEnd(e){
+            e.preventDefault();
             this.yEnd = e.changedTouches[0].screenY;
             if(this.yBegin < this.yEnd) this.isOpen = false;
             if(this.yBegin > this.yEnd) this.isOpen = true;

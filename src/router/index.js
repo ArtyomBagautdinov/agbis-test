@@ -7,7 +7,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Splash" */ '../views/Splash.vue'),
     meta : {
       id: 0,
-      layout: 'empty-layout'
+      layout: 'empty-layout',
+      title: 'Сплеш скрин'
     }
   },
   {
@@ -16,7 +17,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Login" */ '../views/Login.vue'),
     meta : {
       id: 1,
-      layout: 'empty-layout'
+      layout: 'empty-layout',
+      title: 'Авторизация'
     }
   },
   {
@@ -25,7 +27,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Details" */ '../views/Details.vue'),
     meta : {
       id: 2,
-      layout: 'empty-layout'
+      layout: 'empty-layout',
+      title: 'Подробности'
     }
   },
   {
