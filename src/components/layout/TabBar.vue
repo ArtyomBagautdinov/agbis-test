@@ -1,7 +1,7 @@
 <template>
 <div>
     <div @touchstart="handleEventStart" @touchend="handleEventEnd" class="w-full z-10 bg-white fixed bottom-0 transition-all duration-500" :class="{'h-24': !isOpen, 'h-4/5': isOpen}">
-        <img class="w-full relative" style="top: -23px;" src="@/assets/images/tab-border.svg" alt="border">
+        <img class="w-full relative" style="top: -20px;" src="@/assets/images/tab-border.svg" alt="border">
         <div class="flex flex-col justify-center items-center transition-all duration-100">
             <div v-for="i in 20" :key="i">
                 <span>Content</span>
