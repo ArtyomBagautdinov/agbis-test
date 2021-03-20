@@ -6,7 +6,7 @@
                 <img class="h-15 w-15" src="@/assets/images/logo.svg" alt="logo">
             </div>
             <div>
-                <span class="text-sm text-center text-white font-extrabold">Рубрики</span>
+                <span class="text-sm text-center text-white font-extrabold">{{title}}</span>
             </div>
             <div class="cursor-pointer">
                 <img class="h-7 w-7" src="@/assets/icons/hamburger.svg" alt="menu">
@@ -14,3 +14,13 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        computed: {
+            title(){
+                return this.$route.meta.title;
+            }
+        }
+    }
+</script>

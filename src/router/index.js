@@ -34,7 +34,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "About" */ '../views/Posts.vue'),
     meta : {
       id: 3,
-      layout: 'main-layout'
+      layout: 'main-layout',
+      title: 'Рубрики'
     }
   },
   {
@@ -43,7 +44,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "PostPage" */ '../views/PostPage.vue'),
     meta : {
       id: 4,
-      layout: 'main-layout'
+      layout: 'main-layout',
+      title: 'Полный пост'
     }
   }
 ]
